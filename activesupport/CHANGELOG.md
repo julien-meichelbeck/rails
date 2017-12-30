@@ -1,10 +1,16 @@
+*   Support hash as first argument in `assert_difference`. This allows to specify multiple
+    numeric differences in the same assertion.
+    `assert_difference { 'Article.count' => 1, 'Post.count' => 2 }`
+
+    *Julien Meichelbeck*
+
 *   Allow the hash function used to generate non-sensitive digests, such as the
     ETag header, to be specified with `config.active_support.hash_digest_class`.
 
     The object provided must respond to `#hexdigest`, e.g. `Digest::SHA1`.
 
     *Dmitri Dolguikh*
- 
+
 ## Rails 5.2.0.beta2 (November 28, 2017) ##
 
 *   No changes.
